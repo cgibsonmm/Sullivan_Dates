@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class HomeControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "should get welcome" do
+    get :welcome
+    assert :success
+  end
+  
 end

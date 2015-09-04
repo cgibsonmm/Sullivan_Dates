@@ -1,0 +1,34 @@
+// background
+html body{
+  background: image-url('bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#contain{
+  margin-top: 5%;
+  h1{
+    font-family: 'Lobster', cursive;
+    font-size: 4em;
+  }
+  h4, p{
+    font-family: 'PT Sans', sans-serif;
+  }
+  p{
+    margin-top: 20px;
+  }
+}
+.name h1{
+  font-family: 'Lobster', cursive;
+}
+
+#footer{
+  border-top: 1px solid rgba(#545454, 0.5);
+  margin-top: 18%;
+  p{
+    margin-top: 20px;
+    font-size: 0.8em;
+  }
+}
