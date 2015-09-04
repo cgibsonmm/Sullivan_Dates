@@ -32,6 +32,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #require foudation for stylesheets
 gem 'foundation-rails'
 
+gem 'rails_12factor'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
