@@ -24,6 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'foundation-rails'
 
+gem 'google-analytics-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
