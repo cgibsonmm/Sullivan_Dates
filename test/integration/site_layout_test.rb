@@ -6,7 +6,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get root_path
     assert_template 'home/welcome'
     assert_select "a[href=?]", root_path
-    assert_select "a[href=?]", "https://www.facebook.com/groups/812762058783473/"
+    assert_select "a[href=?]", gay_path
   end
 
 end
