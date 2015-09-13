@@ -1,4 +1,4 @@
-// background
+/* background */
 html body{
   background: image-url('bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -6,6 +6,8 @@ html body{
   -o-background-size: cover;
   background-size: cover;
 }
+
+/***** HOME PAGE *****/
 
 #contain{
   margin-top: 5%;
@@ -24,6 +26,23 @@ html body{
   font-family: 'Lobster', cursive;
 }
 
+/* Sign up button */
+#sign-up-button {
+  .button{
+    background-color: #222222;
+    color: #953759;
+  }
+  .button:hover{
+    background-color: rgb(62, 5, 34);
+  }
+}
+
+#sub-button{
+  background-color: #222;
+  color: #953759;
+}
+
+/****** FOOTER *****/
 #footer{
   border-top: 1px solid rgba(#545454, 0.5);
   margin-top: 18%;
@@ -33,10 +52,31 @@ html body{
   }
 }
 
-/* Sign up button */
-#sign-up-button{
-  .button{
-    background-color: #222222;
-    color: #953759;
-  }
+/* mixin */
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+/****** NEW PAGE ******/
+
+/* sign up header */
+#new-sign-up{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+}
+
+/* Sign up form */
+#sign-up-form{
+
+}
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
 }

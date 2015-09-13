@@ -1,0 +1,25 @@
+<% provide(:title, "Sign up") %>
+
+<div class="row">
+  <div class="small-6 small-offset-3">
+    <h1 class="text-center" id="new-sign-up">Sign up</h1>
+    <p>
+      For exclusive updates on Sullivan Dates which will be launching soon.
+    </p>
+    <div class="row">
+      <div class="text-center" id="sign-up-form">
+        <%= form_for(@user) do |f| %>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+
+          <%= f.label :zip_code %>
+          <%= f.text_field :zip_code %>
+
+          <%= f.submit "Subscribe", class: "button radius secondary text-center", id: "sub-button" %>
+        <% end %>
+      </div>
+  </div>
+</div>

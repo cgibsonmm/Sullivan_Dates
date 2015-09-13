@@ -1,0 +1,9 @@
+<% @user.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.zip_code %></td>
+  </tr>
+  <br/>
+  <% end %>
