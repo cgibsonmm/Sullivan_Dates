@@ -7,8 +7,10 @@
       For exclusive updates on Sullivan Dates which will be launching soon.
     </p>
     <div class="row">
-      <div class="text-center" id="sign-up-form">
+      <div id="sign-up-form">
         <%= form_for(@user) do |f| %>
+          <%= render 'shared/error_messages' %>
+
           <%= f.label :name %>
           <%= f.text_field :name %>
 

@@ -18,9 +18,12 @@
 
   <body>
     <%= render "layouts/header" %>
-
-    <%= yield %>
-
+    <div class="row">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert-box #{message_type} radius") %>
+      <% end %>
+      <%= yield %>
+    </div>
     <%= render "layouts/footer" %>
 
   </body>
