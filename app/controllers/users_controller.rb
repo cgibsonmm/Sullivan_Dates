@@ -14,10 +14,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
       if @user.save
-        UserMailer.welcome_email(@user).deliver_now
+        UserMailer.welcome_email(@user).deliver
         redirect_to root_path
         flash[:success] = "Thank you for registering for updates"
-        UserMailer.welcome_email(@user).deliver
       else
         render 'new'
     end
