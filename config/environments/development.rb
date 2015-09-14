@@ -16,16 +16,16 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000'}
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com",
-    :port => 587,
-    :domain => "gmail.com",
-    :authentication => "plain",
-    :enable_starttls_auto => true,
-    :user_name => "cgibsonmm@gmail.com",
-    :password => "fdny1436451"
-  }
+  config.action_mailer.delivery_method = :letter_opener
+  ActionMailer::Base.smtp_settings = {
+  :user_name => ENV['sendgrid_user_id'],
+  :password => ENV['sendgrid_password'],
+  :domain => 'sullivandates.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
 
 
   # Print deprecation notices to the Rails logger.

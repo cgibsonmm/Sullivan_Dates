@@ -31,6 +31,7 @@ gem 'foundation-rails'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem "letter_opener"
   gem 'sqlite3', '1.3.9'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
