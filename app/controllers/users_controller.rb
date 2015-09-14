@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       if @user.save
         redirect_to root_path
         flash[:success] = "Thank you for registering for updates"
-        UserMailer.welcome_email(@user).deliver_now
+        UserMailer.welcome_email(@user).deliver
       else
         render 'new'
     end
