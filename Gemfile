@@ -13,6 +13,9 @@ gem "font-awesome-rails"
 #meta tag
 gem 'meta-tags-helpers', '~> 0.2.0'
 
+# MailChimp for mailer
+gem 'gibbon'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
