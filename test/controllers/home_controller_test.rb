@@ -6,5 +6,5 @@ class HomeControllerTest < ActionController::TestCase
     get :welcome
     assert :success
   end
-  
+
 end
