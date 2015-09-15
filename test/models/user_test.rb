@@ -2,25 +2,40 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   def setup
-    @user = User.new(name: "Example User", email:"User@example.com", zip_code: "12747")
+    @user = User.new(first_name: "Example", last_name: "User", email:"User@example.com", zip_code: "12747")
   end
 
   test "@user should be valid" do
     assert @user.valid?
   end
 
-  test "@user name should not be blank" do
-    @user.name = "  "
+  test "@user first name should not be blank" do
+    @user.first_name = "  "
     assert_not @user.valid?
   end
 
   test "@user name should not be too short" do
-    @user.name = "fo"
+    @user.first_name = "fo"
     assert_not @user.valid?
   end
 
-  test "@user name is not too long" do
-    @user.name = "a" * 56
+  test "@user first name is not too long" do
+    @user.first_name = "a" * 56
+    assert_not @user.valid?
+  end
+
+  test "@user last name should be present" do
+    @user.last_name = ' '
+    assert_not @user.valid?
+  end
+
+  test "@user last name should not be too short" do
+    @user.last_name = "aA"
+    assert_not @user.valid?
+  end
+
+  test "@user last name should not be too long" do
+    @user.last_name = "a" * 56
     assert_not @user.valid?
   end
 
@@ -101,5 +116,6 @@ class UserTest < ActiveSupport::TestCase
       assert_not @user.valid?, "#{zip} should not be valid"
     end
   end
+
 
 end
