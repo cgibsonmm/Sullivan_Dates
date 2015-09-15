@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
       if @user.save
         UserMailer.welcome_email(@user).deliver_now
+        UserMailer.signup_notify(@user).deliver_now
         redirect_to root_path
         flash[:success] = "Thank you for registering for updates"
       else
